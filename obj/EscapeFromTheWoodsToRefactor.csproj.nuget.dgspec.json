@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj": {}
+  },
+  "projects": {
+    "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj",
+        "projectName": "EscapeFromTheWoods",
+        "projectPath": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj",
+        "packagesPath": "/Users/laurenswalraeve/.nuget/packages/",
+        "outputPath": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/laurenswalraeve/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.23.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.23.1, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
