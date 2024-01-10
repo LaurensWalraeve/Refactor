@@ -12,8 +12,8 @@ namespace EscapeFromTheWoods
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            string path = @"/Users/laurenswalraeve/Desktop/Opdracht3/monkey";
-            string connectionString = "mongodb://localhost:27017/monkeys";
+            string path = @"C:\Users\LaurensW\Desktop\Specialisatie_Laurens_Walraeve\Refactor\Data";
+            string connectionString = "mongodb://localhost:27017";
             DBwriter db = new DBwriter(connectionString, "monkeys");
 
             var woods = new List<Wood>
@@ -31,7 +31,6 @@ namespace EscapeFromTheWoods
             stopwatch.Stop();
             Console.WriteLine($"Time elapsed: {stopwatch.Elapsed}");
             Console.WriteLine("end");
-            Console.ReadLine();
         }
 
         private static Wood CreateAndPopulateWood(int minX, int maxX, int minY, int maxY, int treeCount, string[] monkeyNames, string path, DBwriter db)

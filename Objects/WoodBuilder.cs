@@ -11,6 +11,18 @@ namespace EscapeFromTheWoods
         {
             List<Tree> trees = GenerateRandomTrees(size, map);
             int woodID = IDgenerator.GetWoodID();
+
+            List<DBWoodRecord> woodRecords = new List<DBWoodRecord>();
+
+
+            foreach (Tree tree in trees)
+            {
+                DBWoodRecord woodRecord = new DBWoodRecord(woodID, tree.TreeID, tree.X, tree.Y);
+                woodRecords.Add(woodRecord);
+            }
+
+            db.WriteWoodRecordsAsync(woodRecords);
+
             return new Wood(woodID, trees, map, path, db);
         }
 

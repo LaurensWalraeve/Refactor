@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj": {}
+    "C:\\Users\\LaurensW\\Desktop\\Specialisatie_Laurens_Walraeve\\Refactor\\EscapeFromTheWoodsToRefactor.csproj": {}
   },
   "projects": {
-    "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj": {
+    "C:\\Users\\LaurensW\\Desktop\\Specialisatie_Laurens_Walraeve\\Refactor\\EscapeFromTheWoodsToRefactor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj",
+        "projectUniqueName": "C:\\Users\\LaurensW\\Desktop\\Specialisatie_Laurens_Walraeve\\Refactor\\EscapeFromTheWoodsToRefactor.csproj",
         "projectName": "EscapeFromTheWoods",
-        "projectPath": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj",
-        "packagesPath": "/Users/laurenswalraeve/.nuget/packages/",
-        "outputPath": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/obj/",
+        "projectPath": "C:\\Users\\LaurensW\\Desktop\\Specialisatie_Laurens_Walraeve\\Refactor\\EscapeFromTheWoodsToRefactor.csproj",
+        "packagesPath": "C:\\Users\\LaurensW\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LaurensW\\Desktop\\Specialisatie_Laurens_Walraeve\\Refactor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/laurenswalraeve/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\LaurensW\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,11 +78,15 @@
               "version": "[3.1.10, 3.1.10]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[3.1.32, 3.1.32]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[3.1.0, 3.1.0]"
             }
           ],
@@ -90,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

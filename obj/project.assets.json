@@ -1319,25 +1319,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/laurenswalraeve/.nuget/packages/": {}
+    "C:\\Users\\LaurensW\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj",
+      "projectUniqueName": "C:\\Users\\LaurensW\\Desktop\\Specialisatie_Laurens_Walraeve\\Refactor\\EscapeFromTheWoodsToRefactor.csproj",
       "projectName": "EscapeFromTheWoods",
-      "projectPath": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/EscapeFromTheWoodsToRefactor.csproj",
-      "packagesPath": "/Users/laurenswalraeve/.nuget/packages/",
-      "outputPath": "/Users/laurenswalraeve/Desktop/Opdracht3/EscapeFromTheWoodsToRefactor/obj/",
+      "projectPath": "C:\\Users\\LaurensW\\Desktop\\Specialisatie_Laurens_Walraeve\\Refactor\\EscapeFromTheWoodsToRefactor.csproj",
+      "packagesPath": "C:\\Users\\LaurensW\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LaurensW\\Desktop\\Specialisatie_Laurens_Walraeve\\Refactor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/laurenswalraeve/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\LaurensW\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1394,11 +1395,15 @@
             "version": "[3.1.10, 3.1.10]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.osx-x64",
+            "name": "Microsoft.NETCore.App.Host.win-x64",
             "version": "[3.1.32, 3.1.32]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
             "version": "[3.1.0, 3.1.0]"
           }
         ],
@@ -1407,8 +1412,30 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Data.SqlClient' 4.8.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8g2p-5pqh-5jmc",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

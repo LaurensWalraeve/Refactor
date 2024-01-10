@@ -5,6 +5,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using EscapeFromTheWoods.Database;
 using MongoDB.Driver;
 
 namespace EscapeFromTheWoods
@@ -15,6 +16,7 @@ namespace EscapeFromTheWoods
         private readonly string _path;
         private readonly DBwriter _db;
         private readonly Random _random = new Random();
+
         public int WoodID { get; }
         public List<Tree> Trees { get; }
         public List<Monkey> Monkeys { get; }
@@ -46,9 +48,10 @@ namespace EscapeFromTheWoods
         public async Task EscapeAsync()
         {
             var routes = Monkeys.Select(EscapeMonkey).ToList();
-            //await WriteEscaperoutesToBitmapAsync(routes);
+            await WriteEscaperoutesToBitmapAsync(routes);
             await WriteRoutesToDbAsync(routes);
         }
+
 
         private async Task WriteRoutesToDbAsync(IEnumerable<List<Tree>> routes)
         {
@@ -57,17 +60,19 @@ namespace EscapeFromTheWoods
                 var monkey = Monkeys.First(m => m.CurrentTree == route.First());
                 var records = route.Select((t, index) => new DBMonkeyRecord(monkey.MonkeyID, monkey.Name, WoodID, index, t.TreeID, t.X, t.Y)).ToList();
                 await _db.WriteMonkeyRecordsAsync(records);
+                var logRecords = route.Select((t, index) => new DBLogRecord(monkey.MonkeyID, monkey.Name, WoodID, index, t.TreeID, t.X, t.Y)).ToList();
+                await _db.WriteLogsAsync(logRecords);
             }
         }
 
-        //private async Task WriteEscaperoutesToBitmapAsync(IEnumerable<List<Tree>> routes)
-        //{
-        //    using var bitmap = new Bitmap((_map.Xmax - _map.Xmin) * DrawingFactor, (_map.Ymax - _map.Ymin) * DrawingFactor);
-        //    using var graphics = Graphics.FromImage(bitmap);
-        //    DrawTrees(graphics);
-        //    DrawRoutes(routes, graphics);
-        //    bitmap.Save(Path.Combine(_path, $"{WoodID}_escapeRoutes.jpg"), ImageFormat.Jpeg);
-        //}
+        private async Task WriteEscaperoutesToBitmapAsync(IEnumerable<List<Tree>> routes)
+        {
+            using var bitmap = new Bitmap((_map.Xmax - _map.Xmin) * DrawingFactor, (_map.Ymax - _map.Ymin) * DrawingFactor);
+            using var graphics = Graphics.FromImage(bitmap);
+            DrawTrees(graphics);
+            DrawRoutes(routes, graphics);
+            bitmap.Save(Path.Combine(_path, $"{WoodID}_escapeRoutes.jpg"), ImageFormat.Jpeg);
+        }
 
         private void DrawTrees(Graphics graphics)
         {
@@ -130,6 +135,8 @@ namespace EscapeFromTheWoods
                 route.Add(nearestTree);
                 currentTree = nearestTree;
                 currentTree.HasMonkey = true; // Mark new tree as visited
+
+                
             }
 
             return route; // Return the route the monkey took to escape
